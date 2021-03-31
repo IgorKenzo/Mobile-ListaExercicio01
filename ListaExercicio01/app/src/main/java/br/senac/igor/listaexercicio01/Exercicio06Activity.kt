@@ -17,33 +17,14 @@ class Exercicio06Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         b = ActivityExercicio06Binding.inflate(layoutInflater)
         setContentView(b.root)
-
-//        for (element in b.root.children) {
-//            if (element is ImageView) {
-//                element.setOnClickListener {
-//                    val intent = Intent(this, Exercicio06OpenActivity::class.java)
-//
-//                    val extra = Bundle()
-//                    extra.putParcelable("Bitmap", element.drawable.toBitmap())
-//
-//                    intent.putExtra("Img",extra)
-//                    startActivity(intent)
-//                }
-//            }
-//        }
-
-
-
-                b.imageView6.setOnClickListener {
-                    val intent = Intent(this, Exercicio06OpenActivity::class.java)
-
-                    //val extra = Bundle()
-                    //extra.putParcelable("f", )
-
-                    intent.putExtra("Img", b.imageView6.getTag()as String)
-                    startActivity(intent)
-                }
-
-
+        val arrayImageView = arrayOf(b.imageView,b.imageView2,b.imageView3,b.imageView4,b.imageView5,b.imageView6)
+        //println(b.root.children)
+        for (iv in arrayImageView) {
+            iv.setOnClickListener {
+                val intent = Intent(this, Exercicio06OpenActivity::class.java)
+                intent.putExtra("Img", iv.tag as String)
+                startActivity(intent)
+            }
+        }
     }
 }

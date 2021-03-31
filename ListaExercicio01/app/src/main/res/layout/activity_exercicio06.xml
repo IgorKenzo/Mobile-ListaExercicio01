@@ -24,8 +24,8 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:scaleType="centerCrop"
-                android:tag="drawable/aaaa"
-                tools:srcCompat="@drawable/ugood" />
+                android:tag="drawable/ugood"
+                app:srcCompat="@drawable/ugood" />
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -33,13 +33,14 @@
                 android:layout_height="100dp"
                 android:scaleType="centerCrop"
                 android:tag="drawable/call"
-                tools:srcCompat="@drawable/call" />
+                app:srcCompat="@drawable/call" />
 
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:scaleType="centerCrop"
+                android:tag="drawable/unknown"
                 app:srcCompat="@drawable/unknown" />
         </TableRow>
 
@@ -53,6 +54,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:scaleType="centerCrop"
+                android:tag="drawable/reicaprio"
                 app:srcCompat="@drawable/reicaprio" />
 
             <ImageView
@@ -62,6 +64,14 @@
                 android:scaleType="centerCrop"
                 android:tag="drawable/youdontmattergiveup"
                 app:srcCompat="@drawable/youdontmattergiveup" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:tag="drawable/aaaa"
+                app:srcCompat="@drawable/aaaa" />
         </TableRow>
 
     </TableLayout>
