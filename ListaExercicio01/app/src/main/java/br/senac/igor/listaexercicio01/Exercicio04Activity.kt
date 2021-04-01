@@ -16,6 +16,8 @@ class Exercicio04Activity : AppCompatActivity() {
         b = ActivityExercicio04Binding.inflate(layoutInflater)
         setContentView(b.root)
 
+        title = "Exercício 4"
+
         val opcoes = arrayOf<String>("Selecione","Filme", "Música", "Livro", "Jogo")
         val generos = arrayOf<Array<String>>(
             arrayOf<String>("Selecione"),
@@ -31,7 +33,7 @@ class Exercicio04Activity : AppCompatActivity() {
         adapterGeneros.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         b.spinnerOpcao.adapter = adapterOpcoes
-        b.spinnerGenero.adapter = adapterGeneros
+        b.spinnerGen.adapter = adapterGeneros
 
         b.spinnerOpcao.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
@@ -42,7 +44,7 @@ class Exercicio04Activity : AppCompatActivity() {
             ) {
                 val adapter = ArrayAdapter(applicationContext, android.R.layout.simple_spinner_item, generos[position])
                 adapterOpcoes.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-                b.spinnerGenero.adapter = adapter
+                b.spinnerGen.adapter = adapter
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {

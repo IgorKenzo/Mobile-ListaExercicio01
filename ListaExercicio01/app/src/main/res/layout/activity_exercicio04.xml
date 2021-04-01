@@ -18,7 +18,8 @@
     <Spinner
         android:id="@+id/spinnerOpcao"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown" />
 
     <TextView
         android:id="@+id/textView5"
@@ -28,7 +29,8 @@
         android:text="Selecione um gênero:" />
 
     <Spinner
-        android:id="@+id/spinnerGenero"
+        android:id="@+id/spinnerGen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
 </LinearLayout>
